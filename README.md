@@ -45,22 +45,27 @@ Step 4:
  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step4.PNG?raw=true)
  
 Step 5: Below is the code to change the port to 8080
+
  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step5.PNG?raw=true)
 
 Step 6:
 •	Source (src) index.html file in playbook is as follows:
-  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step6a.PNG?raw=true)
+ 
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step6a.PNG?raw=true)
 
 Step 7:
 •	Run the playbook on VM1 server using: ansible-playbook final_webservice.yml --private-key new_ansible.pem -b
-  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7a.PNG?raw=true)
+ 
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7a.PNG?raw=true)
 
 •	Check the status of the webserver deployed using command: sudo service nginx status
-  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7b.PNG?raw=true)
+ 
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7b.PNG?raw=true)
 
 
 •	Simultaneously, check if the desired message from the updated index.html exists on VM2 at http port 8080
-  ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7c.PNG?raw=true)
+ 
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step7c.PNG?raw=true)
 
 
 Step 8:
@@ -89,6 +94,6 @@ The following playbook (stop_nginx.yml) helps in un-deploying the webserver:
 Step 10:
 •	Similarly, check the nginx status for VM3 and corresponding webpage. 
 
- ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step10a.PNG?raw=true)
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step10.PNG?raw=true)
 
- ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step10b.PNG?raw=true)
+ ![alt text](https://github.com/archana-kamath/ansible-akatsuki/blob/main/screenprints/Step10a.PNG?raw=true)
