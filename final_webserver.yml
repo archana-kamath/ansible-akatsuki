@@ -1,0 +1,26 @@
+---
+- hosts: all
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+      become: yes
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+      become: yes
+    - name: copy the nginx config file
+      copy:
+        src: /home/ubuntu/default
+        dest: /etc/nginx/sites-available/default
+      become: yes
+    - name: copy the nginx html file
+      copy:
+        src: /home/ubuntu/index.nginx-debian.html
+        dest: /var/www/html/index.nginx-debian.html
+      become: yes
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+      become: yes
